@@ -14,7 +14,45 @@ bridge. A jumper can be used on the pin rails in lieue of the solder
 bridge. All available GPIO pins are routed to the 2 18pin headers.
 
 ## Firmware
-Example firmware that blinks the LED and changes blink frequency when the push button is pressed is located at:
+Example firmware that blinks the LED and changes blink frequency when
+the push button is pressed is located at:
+
+## Boot configuration
+
+To boot from main flash [0x0800_0000]
+  Connect J2-4 to J2-5 (or) solder JP5-1 to center post
+
+To boot from System mem [0x1FFF_000], or Embedded SRAM [0x2000_0000]
+  Connect J2-4 to J2-3 (or) solder JP6-3 to center post
+
+There is an embedded boot loader, programmmed in production, in the system memory
+block. See the reference manual 3.6.2.
+
+## PIN JUMPER ASSIGNMENT
+```
+                    +-----+
+            +--------------------+
+            |J3     |     |    J2|
+        VDD-|1      +-----+     1|-GND
+        GND-|2                  2|-GND
+       +3.3-|3                  3|-+3.3
+[RESET] PF2-|4                  4|-PF4 [BOOT0_PRE]
+[SWCLK]PA14-|5                  5|-GND
+[SWDIO]PA13-|6                  6|-GND
+        GND-|7       RST        7|-GND
+        PF3-|8       +-+        8|-GND
+        PA0-|9       |O|        9|-GND
+        PA1-|10      +-+       10|-PB7
+        PA2-|11                11|-PB7
+        PA3-|12                12|-PB6
+        PA4-|13                13|-PB4
+        PA6-|14                14|-PB3
+        PA6-|15   UPB          15|-PA15
+        PA7-|16   +-+          16|-PA12 [USER LED - GREEN]
+        PB0-|17   |O|          17|-PA11 [USER PUSHBUTTON]
+        PB1-|18   +-+          18|-PA8
+            |                    |
+            +--------------------+
 
 ## Links
 - [[https://www.puyasemi.com/cpzx3/info_271_aid_247_kid_246.html][Puya PY32 Series]]
