@@ -53,7 +53,7 @@ block. See the reference manual 3.6.2.
         PB1-|18   +-+          18|-PA8
             |                    |
             +--------------------+
-
+```
 ## Links
 - [[https://www.puyasemi.com/cpzx3/info_271_aid_247_kid_246.html][Puya PY32 Series]]
 - [[https://github.com/jaydcarlson/py32-template][Software template for PY32 Series by Jay Carlson]]
