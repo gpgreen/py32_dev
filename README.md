@@ -14,18 +14,21 @@ bridge. A jumper can be used on the pin rails in lieue of the solder
 bridge. All available GPIO pins are routed to the 2 18pin headers.
 
 ## Firmware
-Example firmware that blinks the LED and changes blink frequency when
-the push button is pressed is located at:
+
+Example firmware that blinks the LED. When the user pushbutton is pressed,
+the frequency of the LED blink will change.
+
+https://github.com/gpgreen/py32-dev-blink
 
 ## Boot configuration
 
 To boot from main flash [0x0800_0000]
   Connect J2-4 to J2-5 (or) solder JP5-1 to center post
 
-To boot from System mem [0x1FFF_000], or Embedded SRAM [0x2000_0000]
+To boot from System mem [0x1FFF_0000], or Embedded SRAM [0x2000_0000]
   Connect J2-4 to J2-3 (or) solder JP6-3 to center post
 
-There is an embedded boot loader, programmmed in production, in the system memory
+There is an embedded boot loader, programmed in production, in the system memory
 block. See the reference manual 3.6.2.
 
 ## PIN JUMPER ASSIGNMENT
@@ -57,3 +60,5 @@ block. See the reference manual 3.6.2.
 ## Links
 - [[https://www.puyasemi.com/cpzx3/info_271_aid_247_kid_246.html][Puya PY32 Series]]
 - [[https://github.com/jaydcarlson/py32-template][Software template for PY32 Series by Jay Carlson]]
+- [[https://github.com/gpgreen/py32-dev-blink][Fork of template for these boards]]
+- [[https://www.puyasemi.com/uploadfiles/2022/11/PY-MCU%E8%B5%84%E6%96%99-20221117.rar][Tech documentation for py32f030]]
