@@ -13,6 +13,15 @@ the BOOT0 pin can be set to ground or 3.3V permanently via the solder
 bridge. A jumper can be used on the pin rails in lieue of the solder
 bridge. All available GPIO pins are routed to the 2 18pin headers.
 
+## Changes
+
+- Rev B
+  Moved resettable fuse away from USB C connector, giving more room to resolder
+  connector pins.
+
+- Rev A
+  Original
+
 ## Firmware
 
 Example firmware that blinks the LED. When the user pushbutton is pressed,
@@ -31,7 +40,7 @@ To boot from System mem [0x1FFF_0000], or Embedded SRAM [0x2000_0000]
 There is an embedded boot loader, programmed in production, in the system memory
 block. See the reference manual 3.6.2.
 
-## PIN JUMPER ASSIGNMENT
+## PIN JUMPER SIGNAL ASSIGNMENT
 ```
                     +-----+
             +--------------------+
@@ -58,7 +67,7 @@ block. See the reference manual 3.6.2.
             +--------------------+
 ```
 ## Links
-- [[https://www.puyasemi.com/cpzx3/info_271_aid_247_kid_246.html][Puya PY32 Series]]
-- [[https://github.com/jaydcarlson/py32-template][Software template for PY32 Series by Jay Carlson]]
-- [[https://github.com/gpgreen/py32-dev-blink][Fork of template for these boards]]
-- [[https://www.puyasemi.com/uploadfiles/2022/11/PY-MCU%E8%B5%84%E6%96%99-20221117.rar][Tech documentation for py32f030]]
+- [Puya PY32 Series](https://www.puyasemi.com/cpzx3/info_271_aid_247_kid_246.html)
+- [Software template for PY32 Series by Jay Carlson](https://github.com/jaydcarlson/py32-template)
+- [Fork of template for these boards](https://github.com/gpgreen/py32-dev-blink)
+- [Tech documentation for py32f030](https://www.puyasemi.com/uploadfiles/2022/11/PY-MCU%E8%B5%84%E6%96%99-20221117.rar)
