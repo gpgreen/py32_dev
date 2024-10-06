@@ -66,6 +66,30 @@ block. See the reference manual 3.6.2.
             |                    |
             +--------------------+
 ```
+## Connections to JTAG
+
+From a 20pin JTAG connector, run wires to the following pins to connect a debugger:
+
+VTRef 1  <-> J3-3
+SWDIO 7  <-> J3-6
+SWCLK 9  <-> J3-5
+RESET 15 <-> J3-4
+5V    19 <-> NC
+GND   4  <-> J3-2
+GND   20 <-> J3-7
+
+## Running SEGGER JLink
+
+Run the JLink GDB server via the following:
+```
+JLinkGDBServer -if SWD -JLinkDevicesXMLPath ~/.config/SEGGER/JLinkDevices/Puya/PY32/JLinkDevices.xml -device PY32F030xx8
+```
+
+GDB can be connected via the following:
+```
+gdb-multiarch --command=jlink-py32.gdb target/thumbv6m/debug/blink-py32
+```
+
 ## Links
 - [Puya PY32 Series](https://www.puyasemi.com/cpzx3/info_271_aid_247_kid_246.html)
 - [Software template for PY32 Series by Jay Carlson](https://github.com/jaydcarlson/py32-template)
