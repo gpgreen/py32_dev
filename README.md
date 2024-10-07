@@ -55,8 +55,8 @@ block. See the reference manual 3.6.2.
         PF3-|8       +-+        8|-GND
         PA0-|9       |O|        9|-GND
         PA1-|10      +-+       10|-PB7
-        PA2-|11                11|-PB7
-        PA3-|12                12|-PB6
+        PA2-|11                11|-PB6
+        PA3-|12                12|-PB5
         PA4-|13                13|-PB4
         PA6-|14                14|-PB3
         PA6-|15   UPB          15|-PA15
